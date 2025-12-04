@@ -26,9 +26,10 @@ html, body {
   
   .hero {
     font-family: Arial, sans-serif;
+    color: rgb(300, 300, 300);
     text-align: center;
     padding: 310px 20px;
-    background-color: #d3cbcb;
+    background-color: #5d0e05;
 
     font-size: 2.5rem;
     
@@ -43,7 +44,7 @@ html, body {
   width: 50px;
   height: 50px;
   background: rgba(255, 255, 255, 0.116);
-  border: 2px solid rgba(0, 0, 0, 0.400);
+  border: 2px solid rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   cursor: pointer;
   position: fixed;
@@ -60,7 +61,7 @@ html, body {
 .menu-btn .line {
   width: 20px;
   height: 2px;
-  background: rgb(250, 250, 250);
+  background: rgb(165, 165, 165);
   transition: all 0.3s ease;
 }
 
@@ -139,23 +140,31 @@ html, body {
 
   .history {
     font-family: Arial, sans-serif;
-    font-size: x-large;
+    font-size: xx-large;
+    line-height: 1.5;
+
     text-align: justify;
-    padding: 200px 380px;
+    padding: 100px 380px;
     background-color: #999696;
+
+    background-image: linear-gradient(rgba(0, 0, 0, .5)), url('baybayin-image.jpg');  
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed; 
+    
+    position: relative; 
+    color: white; 
+    z-index: 1; 
 
   } 
 
-  .history p {
-    line-height: 2;
-  }
 
   .what {
     font-family: Arial, sans-serif;
     font-size: x-large;
     text-align: justify;
     padding: 220px 380px;
-    background-color: #bbbaba;
+    background-color: #f5f1e4;
   } 
 
   .what p {
@@ -169,7 +178,8 @@ html, body {
     font-size: x-large;
     text-align: justify;
     padding: 60px 380px;
-    background-color: #868080;
+    background-color: #ccbaae
+;
 
   } 
 
@@ -187,7 +197,8 @@ html, body {
   display: flex;
   gap: 40px;
   padding: 50px 150px;
-  background-color: #413e3e;
+  background-color: #898e75
+;
 
   
 }
@@ -201,7 +212,7 @@ html, body {
   text-align: center;
   margin-bottom: 20px;
   font-size: xx-large;
-  color: #8f968b;
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -245,10 +256,8 @@ html, body {
 
 
 .highlight {
-
-  
   padding: 60px 150px;
-  background-color: #e2e2e2;
+  background-color: #cdc3c3;
 }
 
 .who, .unique {
@@ -261,7 +270,7 @@ html, body {
   text-align: center;
   margin-bottom: 20px;
   font-size: 50px;
-  color: #2d5016;
+  color: #000000;
 }
 
 
@@ -289,7 +298,7 @@ box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 
 .card-front {
   font-weight: bold;
-  color: #2d5016;
+  color: #000000;
   font-size: 14px;
   font-size: x-large;
   font-family: arial, sans-serif;
@@ -306,7 +315,7 @@ box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   top: 100%;
   left: 0;
   right: 0;
-  background: #2d5016;
+  background: #5d0e05;
   padding: 15px;
   border-radius: 10px;
   z-index: 10;
@@ -314,7 +323,7 @@ box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 
 .who .feature-card:hover,
 .unique .feature-card:hover {
-  background: #2d5016;
+  background: #5d0e05;
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 20;
@@ -381,7 +390,7 @@ box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   
   gap: 50x;
   padding: 50px 150px;
-  background-color: #9c9696;
+  background-color: #f4f3f3;
   align-items: center;
 
   width: 100%;
@@ -424,13 +433,13 @@ box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 
 .future-card .card-front {
   font-weight: bold;
-  color: #2d5016;
+  color: #  5d0e05;
   font-size: larger;
   
 }
 
 .future-card:hover {
-  background: #2d5016;
+  background: #5d0e05;
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 20;
@@ -464,13 +473,6 @@ box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   font-style: italic;
 }
 
-
-  /* .visual img {
-    width: 100%;
-    max-width: 800px;
-    display: block;
-    margin: 0 auto;
-  } */
 
   .info {
     padding: 430px 20px;
@@ -565,18 +567,29 @@ box-shadow: 0 8px 16px rgba(0,0,0,0.2);
       margin-left: 4rem;
     }
   .hero {
-    padding: 150px 20px;
+    padding: 351px 20px;
     font-size: 1.5rem;
   }
   
   .hero h1 {
     font-size: 2rem;
   }
-  
-  .history, .what, .why {
-    padding: 80px 30px;
+
+  .history{
+    padding: 110px 30px;
+    font-size: larger;
+  }
+
+  .what {
+    padding: 110px 30px;
     font-size: large;
   }
+  .why {
+    padding: 20px 30px;
+    font-size: medium;
+  }
+  
+
   
   .two-column-section {
     flex-direction: column;
