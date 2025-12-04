@@ -1,23 +1,29 @@
   style.css
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+body{
+  overflow-x: hidden;
+}
+
+
+  html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
   
   .hero {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 340px 20px;
+    padding: 310px 20px;
     background-color: #d3cbcb;
 
     font-size: 2.5rem;
     
   }
 
-  html {
-  scroll-behavior: smooth;
-} 
 
 .menu-toggle {
   display: none;
@@ -88,13 +94,27 @@
 .menu-link {
   color: white;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
+  text-align: left;
+  
+  padding-right: 5px;
+  transition: padding-left 0.3s ease;
+}
+
+.menu-nav ul {
+  margin: 0;  
+  list-style-type: none;
+  text-align: left;
+  padding-left: 5;
+
 }
 
 .menu-link:hover {
-  color: #ccc;
+  color: #bebebe;
+  padding-left: 5px;
+  transition: padding-left 0.3s ease;
 }
 
   .cta {
@@ -107,18 +127,13 @@
     cursor: pointer;
   }
 
-  .features {
-    display: flex;
-    justify-content: space-around;
-    padding: 450px 20px;
-    background-color: #333;
-  }
   .history {
     font-family: Arial, sans-serif;
     font-size: x-large;
     text-align: justify;
     padding: 200px 380px;
     background-color: #999696;
+
   } 
 
   .history p {
@@ -145,6 +160,7 @@
     text-align: justify;
     padding: 60px 380px;
     background-color: #868080;
+
   } 
 
   .why p {
@@ -157,15 +173,290 @@
     line-height: 2;
   }
 
-  .feature-card {
-    flex: 1;
-    margin: 0 10px;
-    padding: 20px;
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-  }
+  .two-column-section {
+  display: flex;
+  gap: 40px;
+  padding: 25px 150px;
+  background-color: #ac2323;
+
+  
+}
+
+.column {
+  flex: 1;
+  
+}
+
+.column h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: #2d5016;
+}
+
+.content-box {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.content-box h3 {
+  color: #2d5016;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-size: x-large;
+}
+
+.content-box p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+  text-align: justify;
+  line-height: 20px;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.content-box ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 2.7;
+  font-size: x-large;
+}
+
+.content-box ul li:before {
+  content: "✔ ";
+  color: #2d5016;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+.highlight {
+
+  
+  padding: 60px 150px;
+  background-color: #e2e2e2;
+}
+
+.who, .unique {
+  margin-bottom: 150px;
+  text-align: center;
+}
+
+.who h2, .unique h2 {
+  font-family: arial, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 50px;
+  color: #2d5016;
+}
+
+
+.who .feature-card,
+.unique .feature-card {
+  display: inline-block;
+  width: calc(18% - 15px);
+  background: white;
+  border: 2px solid #ddd;
+box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+
+  padding: 15px 20px;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  vertical-align: top;
+  box-sizing: border-box;
+  min-height: 150px;
+  position: relative;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front {
+  font-weight: bold;
+  color: #2d5016;
+  font-size: 14px;
+  font-size: x-large;
+  font-family: arial, sans-serif;
+}
+
+.card-back {
+  font-family: arial, sans-serif;
+  display: none;
+  color: #555;
+  margin-top: 8px;
+  line-height: 1.5;
+  font-size: larger;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #2d5016;
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.who .feature-card:hover,
+.unique .feature-card:hover {
+  background: #2d5016;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 20;
+}
+.who .feature-card:hover .card-front,
+.unique .feature-card:hover .card-front {
+  color: white;
+}
+
+.who .feature-card:hover .card-back,
+.unique .feature-card:hover .card-back {
+  display: block;
+  color: white;
+}
+
+.getting-started {
+  padding: 100px 250px;
+  background-color: #f5f5f5;
+  text-align: center;
+  
+}
+.getting-started h2 {
+  font-size: 50px;
+  color: #2d5016;
+  margin-bottom: 20px;
+}
+
+.getting-started .intro {
+  font-size: 30px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.steps {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.step-number {
+  font-size:40px;
+  font-weight: bold;
+  color: #2d5016;
+  margin-right: 20px;
+  min-width: 30px;
+}
+
+.step p {
+  font-size: x-large;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.future {
+  display: flex;
+  
+  gap: 50x;
+  padding: 50px 150px;
+  background-color: #9c9696;
+  align-items: center;
+
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+
+.future-left {
+  flex: 1;
+  max-width: 50%;
+}
+
+.future-left h2 {
+  font-size: 32px;
+  color: #2d5016;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.future-left h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  color: #2d5016;
+  margin-bottom: 20px;
+}
+
+
+
+.future-card {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 7px 20px;
+  margin: 15px 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.future-card .card-front {
+  font-weight: bold;
+  color: #2d5016;
+  font-size: 18px;
+  
+}
+
+.future-card:hover {
+  background: #2d5016;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 20;
+}
+
+.future-card:hover .card-front {
+  color: white;
+}
+
+.future-right {
+  flex: 1;
+  display: flex;
+  margin-left: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.conclusion-text {
+  text-align: center;
+  max-width: 1000px;
+  padding: 30px ;
+  border-top: 3px solid #000000;
+  border-bottom: 3px solid #2d5016;
+}
+
+.conclusion-text p {
+  color: #000000;
+  font-size: x-large;
+  line-height: 1.8;
+  margin: 0px;
+  font-style: italic;
+}
+
 
   .visual img {
     width: 100%;
